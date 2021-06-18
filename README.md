@@ -112,5 +112,15 @@ Adding more datasets and face recognition models to FaceSec is trivial.
 2. Add the implementation of your neural architecture in ```./architecture```. Note that you may add a resize layer and a normalized layer (see details in ```./architecture/vggface.py```, note that the input images has [0,1] scale after using our data loader).
 3. Import your method in ```face_recognition.py``` and edit the ```load_model``` function.
 
+## Citation
+```
+@inproceedings{tong2021facesec,
+  title={FACESEC: A Fine-grained Robustness Evaluation Framework for Face Recognition Systems},
+  author={Tong, Liang and Chen, Zhengzhang and Ni, Jingchao and Cheng, Wei and Song, Dongjin and Chen, Haifeng and Vorobeychik, Yevgeniy},
+  booktitle={IEEE/CVF Conference on Computer Vision and Pattern Recognition},
+  year={2021}
+}
+```
+
 ## Contact
 * Liang Tong (liangtong39@gmail.com)
