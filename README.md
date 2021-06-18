@@ -1,6 +1,6 @@
 # FaceSec: A Fine-grained Robustness Evaluation Framework for Face Recognition Systems
 
-Corresponding code to the paper "FACESEC: A Fine-grained Robustness Evaluation Framework for Face Recognition Systems" at CVPR 2021 ([PDF](https://arxiv.org/pdf/2104.04107.pdf)).
+Sample code corresponding to the paper "FACESEC: A Fine-grained Robustness Evaluation Framework for Face Recognition Systems" at CVPR 2021 ([PDF](https://arxiv.org/pdf/2104.04107.pdf)).
 
 ## Environment and prerequisites
 Before getting started, we recommend using Python 3 (>=3.6.7) throughout the experiments. In addition, the following packages are required.
