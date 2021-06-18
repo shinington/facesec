@@ -15,7 +15,7 @@ Before getting started, we recommend using Python 3 (>=3.6.7) throughout the exp
 * Matplotlib
 
 ## Dataset and models
-Trained models for VggFace and FaceNet can be download [here](https://www.dropbox.com/sh/hqhkunnnom6rxau/AABxogyk9LKDMWwoLjut8SlNa?dl=0). Please put the downloaded models into the ```model``` folder. The closed-set models are trained from 100 classes of face images in VGGFace2. We used the same classes for evaluation on both closed- and open-set face recognition, stored in the the ```data``` folder.
+Trained models for VggFace and FaceNet can be download [here](https://www.dropbox.com/sh/hqhkunnnom6rxau/AABxogyk9LKDMWwoLjut8SlNa?dl=0). Please put the downloaded models into the ```model``` folder. The closed-set models are trained from 100 classes of face images in VGGFace2. We used the same classes for evaluation on both closed- and open-set face recognition, stored in the the ```data``` folder. All the test data is frontal and crpped by MTCNN.
 
 ## Directory layout
 ```
