@@ -19,6 +19,9 @@ Trained models for VggFace and FaceNet can be download [here](https://www.dropbo
 
 For VGGFace, we adopted and modified [this implementation](https://github.com/prlz77/vgg-face.pytorch). For FaceNet, we adopted the implementation available [here](https://github.com/timesler/facenet-pytorch). Please see ```architecture/vggface.py``` and ```architecture/facenet.py``` for details.  
 
+## Closed-set and open-set face recognition
+Our toolkit support both closed-set and open-set face recognition. The difference between the two lies in whether test IDs appear in the training set. Basically, closed-set face recognition contains exactly the same face IDs in the training and test set, and most work focuses on ```identification``` by using typical classification. By contrast, for open-set face recognition, training IDs and test IDs are not necessarily the same, and most work focuses on ```verification``` by solving a metric learning problem. Details of the differences are described in [this paper](https://openaccess.thecvf.com/content_cvpr_2017/papers/Liu_SphereFace_Deep_Hypersphere_CVPR_2017_paper.pdf) (see its Figure 1).
+
 ## Directory layout
 ```
 root
@@ -104,9 +107,6 @@ $ python robust_evaluation.py \
     -g data/gallery
 ```
 This is also called ```black-box attack``` or ```transfer attack``` on FaceNet, where VGGFace is called the ```source model``` and FaceNet the ```target model```. Note that if the adversairal examples have been produced and stored in the output directory, then this script will directly produce black-box attacks without performing white-box attacks twice.
-
-## Closed-set and open-set face recognition
-Our toolkit support both closed-set and open-set face recognition. The difference between the two lies in whether test IDs appear in the training set. Basically, closed-set face recognition contains exactly the same face IDs in the training and test set, and most work focuses on ```identification``` by using typical classification. By contrast, for open-set face recognition, training IDs and test IDs are not necessarily the same, and most work focuses on ```verification``` by solving a metric learning problem. Details of the differences are described in [this paper](https://openaccess.thecvf.com/content_cvpr_2017/papers/Liu_SphereFace_Deep_Hypersphere_CVPR_2017_paper.pdf) (see its Figure 1).
 
 ## Individual and universal attack
 Additionally, FaceSec supports both individual and universal attacks: the former produces a specific perturbation for each test data, while the latter produces a universal perturbation for a batch of test data. To explicitly control the ```universality``` of attacks, one can set the ```-u``` option in ```main.py``` as ```True``` and edit the value of ```batch_size``` in ```config.py```.
