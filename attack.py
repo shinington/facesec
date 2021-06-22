@@ -113,7 +113,7 @@ def utgt_occlusion(mode, model, X, y, mask, epsilon=config['occlusion']['epsilon
             else:
                 loss = torch.sum(1-cos(model(X), model(X*(1-mask) + delta)))
         loss.backward()
-        delta.data = (delta + alpha*delta.grad.detach().sign()).clamp(-epsilon,epsilon)
+        delta.data = (delta + alpha*delta.grad.detach().sign()).clamp(0, epsilon)
         delta.data = delta.detach()*mask
         delta.grad.zero_()
         
